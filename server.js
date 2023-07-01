@@ -1,5 +1,5 @@
 const express = require('express');
-
+const serverConfig = require('./configs/server.config')
 
 const app = express();
 
@@ -8,6 +8,6 @@ const app = express();
 
 
 
-app.listen(3000, ()=>{
-    console.log("server up at port 3000");
+app.listen(serverConfig.PORT, ()=>{
+    console.log(`server up at port ${serverConfig.PORT}`);
 });
